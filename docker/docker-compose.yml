@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  neuraleduseg:
+    volumes:
+      - "..:/home/workspace"
+    container_name: neuraleduseg
+    platform: linux/x86_64
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    stdin_open: true
+    tty: true

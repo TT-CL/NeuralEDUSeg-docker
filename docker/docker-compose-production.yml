@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  neuraleduseg:
+    # Use this only on the server
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            #which gpus you want to use
+            #specify device ids or 'all'
+            device_ids: ["2"]
+            capabilities: [gpu]
